@@ -52,10 +52,6 @@ li {
     list-style-type: none;
 }
 
-.card-info {
-    padding: 10px 16px;
-}
-
 .card-img {
     position: relative;
     overflow: hidden;
@@ -63,29 +59,47 @@ li {
     background: #ddd;
 }
 
-.card-price {
-    padding: .4em .1em;
-    border-radius: 6px;
-    background: #00c1ff;
-    text-align: center;
-    color: white;
-}
-
-.card-info > .card-title {
-    margin: 0;
-    font-size: 12pt;
-}
-
-.card-info > .card-grade {
-    margin-top: -.2em;
-}
-
-.card-info > .card-genre {
+.card-info {
+    padding: 10px 16px; }
+  
+  .card-info > p, .cart-header-msg.card-info > li {
+    margin: .4em 0;
+    padding-left: .5em;
+    font-size: 14px;
+    font-weight: normal; }
+  
+  .card-info > .card-title {
+    margin: 0; }
+  
+  .card-info > .card-grade {
+    margin-top: -.2em; }
+  
+  .card-info > .card-genre {
     margin-top: -.4em;
-    font-size: 11px;
-}
-.card-info > .card-price {
+    font-size: 11px; }
+  
+  .card-info > .card-meta {
     margin-bottom: 0;
-    padding-left: 0;
     font-size: 12px;
+    font-weight: 600;
+    color: #00c1ff; }
+  
+  .card-info > .card-price {
+    margin: 10px 0 0 0;
+    margin-bottom: 0;
+    padding: .4em .1em;
+    font-size: 12px;
+    background-color: #00c1ff;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+}
+
+a {
+    padding-left: .5em;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: ;
 }

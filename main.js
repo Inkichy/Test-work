@@ -18,21 +18,21 @@ sendReq( 'POST', requestURL, {"data":""})
     .then(
         d => {
             c(d.items);
-            // console.log(d)
+            console.log(d)
         }
     )
     .catch( err => console.log(err))
 
 function c(data) {
-    data.forEach(({ title, genre, subject, status, price, priceBonus }) => {
-        // console.log('Title: ' + title, 'Genre: ' + genre, 'Subject: ' + subject, 'Status: ' + status, 'Price: ' + price, 'Bonus: ' + priceBonus)
-        createCard(title, genre, subject, status, price, priceBonus);
+    data.forEach(({ title, genre, subject, status, price, priceBonus, shopUrl }) => {
+        console.log('Title: ' + title, 'Genre: ' + genre, 'Subject: ' + subject, 'Status: ' + status, 'Price: ' + price, 'Bonus: ' + priceBonus)
+        createCard(title, genre, subject, status, price, priceBonus, shopUrl);
     });
 }
 
 
 
-function createCard(title, genre, subject, status, price, priceBonus) {
+function createCard(title, genre, subject, status, price, priceBonus, shopUrl) {
     let card = document.createElement('li');
     let g = []
     t = title.split('.')
@@ -50,6 +50,7 @@ function createCard(title, genre, subject, status, price, priceBonus) {
         <p class="card-title">${data[0]}</p>
         <p class="card-grade">${data[1]}</p>
         <p class="card-genre">${genre}</p>
+        <a class="card-meta" href="${shopUrl}">Подробнее</a>
         <div class="card-price">${price}р</div>
     </div>
     `
